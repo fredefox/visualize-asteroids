@@ -1,0 +1,1 @@
+tail -n+42 data/MPCORB.DAT | ./parse.py
