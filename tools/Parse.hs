@@ -37,25 +37,25 @@ minorPlanet :: Parser MinorPlanet
 minorPlanet = do
     designation <- chars 7
     sp
-    magnitude <- chars 5
+    magnitude <- fmap read $ chars 5
     sp
-    slope <- chars 5
+    slope <- fmap read $ chars 5
     sp
     epoch <- chars 5
     sp
-    epochAnomaly <- chars 9
+    epochAnomaly <- fmap read $ chars 9
     sp
-    perihelion <- chars 10
+    perihelion <- fmap read $ chars 10
     sp
-    longitude <- chars 10
+    longitude <- fmap read $ chars 10
     sp
-    inclination <- chars 11
+    inclination <- fmap read $ chars 11
     sp
-    eccentricity <- chars 9
+    eccentricity <- fmap read $ chars 9
     sp
-    motion <- chars 11
+    motion <- fmap read $ chars 11
     sp
-    majorAxis <- chars 11
+    majorAxis <- fmap read $ chars 11
     sp
     uncertainty <- chars 2
     sp

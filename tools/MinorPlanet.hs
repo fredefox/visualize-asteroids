@@ -5,21 +5,21 @@ module MinorPlanet
 
 data MinorPlanet = MinorPlanet
     { designation :: String
-    , magnitude   :: String
-    , slope       :: String
+    , magnitude   :: Float
+    , slope       :: Float
 
     , epoch       :: String
-    , epochAnomaly :: String
+    , epochAnomaly :: Float
 
-    , perihelion  :: String
-    , longitude   :: String
-    , inclination :: String
+    , perihelion  :: Float
+    , longitude   :: Float
+    , inclination :: Float
 
-    , eccentricity :: String
-    , motion      :: String
-    , majorAxis   :: String
+    , eccentricity :: Float
+    , motion      :: Float
+    , majorAxis   :: Float
 
-    , uncertainty :: String
+    , uncertainty :: String -- TODO: Should be wrapped in a data-type
 
     , reference   :: String
     , observations :: Int
@@ -36,8 +36,8 @@ data MinorPlanet = MinorPlanet
     , other       :: String
 
     -- Called "readable designation"
-    , name        :: String
-    , lastObs     :: String
+    , name        :: String -- TODO: Name concist of two parts, wrap this
+    , lastObs     :: String -- TODO: This is a date-type
     } deriving (Show)
 
 data Orbit
